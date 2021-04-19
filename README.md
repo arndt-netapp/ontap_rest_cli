@@ -36,3 +36,7 @@ optional arguments:
                         password for username
   -d, --debug           Use debug mode for API calls
 ```
+
+Notes:
+1. The ONTAP REST API CLI passthrough is only available in a cluster scope,
+   which means you cannot use this API when connecting to a vserver LIF.
