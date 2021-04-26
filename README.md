@@ -40,3 +40,9 @@ optional arguments:
 Notes:
 1. The ONTAP REST API CLI passthrough is only available in a cluster scope,
    which means you cannot use this API when connecting to a vserver LIF.
+2. CLI commands that merely do a “do you want to continue” yes/no prompt
+   are supported from the REST passthrough (with ‘yes’ assumed). Commands
+   that prompt for additional input (like a password) are only supported from
+   the REST passthrough if the specific command supports a hidden field
+   (eg: ‘password’) to avoid the prompt.  This is done in many commands,
+   but not all.
